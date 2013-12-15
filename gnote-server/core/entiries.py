@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
  
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
- 
-
 MALE, FEMALE = (0, 1)
 
 class UserInfo(object):
@@ -17,7 +13,7 @@ class UserInfo(object):
         self.registered = False
 
     def __unicode__(self):
-        return u"%s <%s>" % (self.__name, self.__email)
+        return u"%s <%s>" % (self.name, self.email)
 
 # -----------------------------------------------------------------------------
 
@@ -30,7 +26,7 @@ class MemberInfo(object):
         self.isAdmin = False
         
     def __unicode__(self):
-        return u"{%s}" % self.__name if self.__isAdmin else self.__name
+        return u"{%s}" % self.name if self.isAdmin else self.name
 
 # -----------------------------------------------------------------------------
 
@@ -45,7 +41,7 @@ class GroupInfo(object):
         self.creatorId = -1
         
     def __unicode__(self):
-        return u"%s (%s)" % (self.__name, self.__description)
+        return u"%s (%s)" % (self.name, self.description)
     
 # -----------------------------------------------------------------------------
 
