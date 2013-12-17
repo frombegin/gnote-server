@@ -3,7 +3,7 @@
  
 import unittest
 
-from entiries import UserInfo
+from entities import UserInfo
 
 class Test(unittest.TestCase):
 
