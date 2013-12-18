@@ -49,13 +49,33 @@ def cryptPassword(password):
 # ------------------------------------------------------------------------------
 
 
+def normalizeEmail(email):
+    """ normalize_email(str) -> str
+
+    Normalize the address by lowercasing the domain part of the email address.
+    The code is from django :-)
+    """
+
+    email = email or ''
+    try:
+        emailName, domainPart = email.strip().rsplit('@', 1)
+    except ValueError:
+            pass
+    else:
+        email = '@'.join([emailName, domainPart.lower()])
+    return email
+
+
+# ------------------------------------------------------------------------------
+
+
 def main():
+    print normalizeEmail("JOHN.smith@GOOGLE.com.Hk")
+    print normalizeEmail(None)
+    print normalizeEmail("JOHN.smith@GOOGLE.com.Hk")
     print randomString(10)
     print randomPassword()
     print cryptPassword("lmUIFLbhsc")
-    print randomString.__doc__
-    print randomPassword.__doc__
-    print cryptPassword.__doc__
 
 if __name__ == '__main__':
     main()
