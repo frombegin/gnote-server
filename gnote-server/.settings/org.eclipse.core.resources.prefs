@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding/main.py=utf-8
+encoding/perftest.py=utf-8
 encoding/tests.py=utf-8
 encoding/threadpool-tests.py=utf-8
 encoding/user.py=utf-8
